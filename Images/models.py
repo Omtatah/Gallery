@@ -47,3 +47,16 @@ class Location(models.Model):
     @classmethod
     def delete_category(cls,name):
         cls.objects.filter(name = name).delete()
+        
+class categories(models.Model):
+    category = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.category
+
+    def save_category(self):
+        self.save()
+
+    @classmethod
+    def delete_category(cls,category):
+        cls.objects.filter(category=category).delete()        
