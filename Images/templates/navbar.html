@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/baseimage.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" style="background-color: rgb(3, 10, 27)">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'welcome' %}">PICHA MOTO MOTO</a>
+            </div>
+            <div class="col-sm-4 col-md-4 navbar-right">
+
+                <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Category" name="photo">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i
+                                    class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </nav>
+</body>
+
+</html>
